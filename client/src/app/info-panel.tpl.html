@@ -1,0 +1,19 @@
+<div id="info-panel" class="well" style="width: 250px; padding: 8px 0;" ng-controller="InfoPanelCtrl">
+    <div id="image-list-panel">
+        <ul class="nav nav-tabs nav-stacked">
+            <li class="nav-header">Images:</li>
+            <li ng-repeat="image in images">
+                <a href="#" ng-click="selectImage(image.id)">{{image.title}}</a>
+            </li>
+
+        </ul>
+        <div ng-show="!images.length">No Images!</div>
+    </div>
+    <div id="image-detail-panel">
+        Image Details:
+
+        {{selectedImageId}}
+        Selected Image: {{selectedImage}}
+
+    </div>
+</div>
